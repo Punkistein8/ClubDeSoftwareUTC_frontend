@@ -10,10 +10,10 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HashRouter>
+    {/* <HashRouter> */}
       {/* <BrowserRouter basename="/frontend"> */}
       <App />
       {/* </BrowserRouter> */}
-    </HashRouter>
+    {/* </HashRouter> */}
   </React.StrictMode>
 )
