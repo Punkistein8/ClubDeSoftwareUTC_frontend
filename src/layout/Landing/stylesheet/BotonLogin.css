@@ -1,0 +1,30 @@
+.botonLogin {
+  background-color: #00A7E6;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 2vh;
+  margin: 4px 2px;
+  margin-top: 5vmax;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+.botonLogin:hover {
+  background-color: #018bbd;
+}
+
+.botonLogin--login{
+  color : #fff;
+  text-decoration: none;
+  font-family: 'Comfortaa', cursive;
+}
+
+@media (max-width: 900px) {
+  .botonLogin {
+    margin-top: 0;
+  }
+}
+

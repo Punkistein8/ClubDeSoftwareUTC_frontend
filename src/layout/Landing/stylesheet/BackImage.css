@@ -1,0 +1,10 @@
+.home-backImage{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0.15);
+  z-index: -1;
+}
