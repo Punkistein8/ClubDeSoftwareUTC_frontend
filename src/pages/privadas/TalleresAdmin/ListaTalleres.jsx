@@ -7,13 +7,6 @@ const ListaTalleres = () => {
 
   const { talleres } = useTalleres();
 
-  useEffect(() => {
-    const obtenerTalleres = () => {
-      console.log(talleres);
-    }
-    obtenerTalleres();
-  }, [1]);
-
   return (
     <>
       {talleres.length ? (

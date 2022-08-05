@@ -26,6 +26,9 @@ const Login = () => {
       // alert(data.name); //Saludando al loegeado
       localStorage.setItem('tokenAppClub', data.token); //Seteando el token de respuesta en el localStorage
       setAuth(data)
+      if (data.tipo == 'usuario') {
+        return navegar('/utcstudent')
+      }
       navegar('/admin')
     } catch (error) {
       alert(error.response.data.msg) //Ojo con el destructuring

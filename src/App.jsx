@@ -9,13 +9,15 @@ import ConfirmarCuenta from "./pages/ConfirmarCuenta.jsx"
 import NuevoPassword from "./pages/nuevo-pass/NuevoPassword.jsx"
 
 import AdministrarTalleres from "./pages/privadas/TalleresAdmin/AdministrarTalleres.jsx"
-import Talleres from "./pages/privadas/TalleresAdmin/TalleresUIForm.jsx"
+import TalleresUIForm from "./pages/privadas/TalleresAdmin/TalleresUIForm.jsx"
 import Calendario from "./pages/privadas/Calendario.jsx"
 import Blog from "./pages/privadas/Blog.jsx"
 import Usuarios from "./pages/privadas/Usuarios.jsx"
 
 import { AuthProvider } from "./context/AuthProvider.jsx"
 import { TalleresProvider } from "./context/TalleresProvider.jsx"
+import EstudiantesHome from "./pages/privadas/Estudiantes/EstudiantesHome.jsx"
+import TalleresStudent from "./pages/privadas/Estudiantes/TalleresStudent.jsx"
 
 const App = () => {
 
@@ -43,10 +45,15 @@ const App = () => {
 
             <Route path="/admin" element={<RutaProtegida />}>
               <Route index element={<AdministrarTalleres />} />
-              <Route exact path="talleres" element={<Talleres />} />
+              <Route exact path="talleres" element={<TalleresUIForm />} />
               <Route exact path="calendario" element={<Calendario />} />
               <Route exact path="blog" element={<Blog />} />
               <Route exact path="usuarios" element={<Usuarios />} />
+            </Route>
+
+            <Route path="/utcstudent" element={<RutaProtegida />}>
+              <Route index element={<EstudiantesHome />} />
+              <Route exact path="talleres" element={<TalleresStudent />} />
             </Route>
           </Routes>
         </TalleresProvider>

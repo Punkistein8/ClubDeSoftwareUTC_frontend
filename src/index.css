@@ -5,7 +5,7 @@
 html {
   scroll-behavior: smooth;
   /* height: 100vh; */
-  background-color: var(--bs-gray-900);
+  /* background-color: var(--bs-gray-900); */
   max-height: 100vh;
 }
 
@@ -16,7 +16,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--bs-gray-900);
+  /* background-color: var(--bs-gray-900); */
 }
 
 code {

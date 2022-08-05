@@ -1,6 +1,7 @@
 import { Outlet, Navigate } from "react-router-dom"
 import useAuth from "../hooks/useAuth"
 import AdminView from "./AdminView/AdminView";
+import StudentView from "./StudentView/StudentView";
 
 
 
@@ -13,9 +14,12 @@ const RutaProtegida = () => {
 
   return (
     <>
-      <AdminView />
+      {auth.tipo === "usuario" ?
+        (<StudentView />)
+        :
+        (<AdminView />)
+      }
       {auth?._id ? <Outlet /> : <Navigate to="/login" />}
-      {/* <Outlet></Outlet> */}
     </>
   )
 
