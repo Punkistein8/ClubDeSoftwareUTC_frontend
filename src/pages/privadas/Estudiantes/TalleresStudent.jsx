@@ -14,7 +14,7 @@ const TalleresStudent = () => {
       setTalleres(data);
     }
     setearTalleres();
-  })
+  }, [])
   return (
     <>
       <h1 className='text-3xl font-bold'>Todos los talleres</h1>
