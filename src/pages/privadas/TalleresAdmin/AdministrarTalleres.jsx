@@ -1,5 +1,5 @@
 
-import useAuth from "../../hooks/useAuth"
+import useAuth from "../../../hooks/useAuth"
 
 const AdministrarTalleres = () => {
   const { auth, cargando } = useAuth();

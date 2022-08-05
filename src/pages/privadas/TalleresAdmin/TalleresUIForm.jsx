@@ -1,5 +1,8 @@
-import { useState } from 'react'
-import useTalleres from '../../hooks/useTalleres'
+import { useState, useEffect } from 'react'
+import clienteAxios from '../../../config/axios'
+import useTalleres from '../../../hooks/useTalleres'
+
+import ListaTalleres from './ListaTalleres'
 
 const Talleres = () => {
 
@@ -7,7 +10,15 @@ const Talleres = () => {
   const [responsables, setResponsables] = useState('')
   const [descripcion, setDescripcion] = useState('')
 
-  const { guardarTaller } = useTalleres();
+  const { guardarTaller, setTalleres } = useTalleres();
+
+  useEffect(() => {//useEffect para obtener los talleres
+    const setearTalleres = async () => {
+      const { data } = await clienteAxios.get('talleres/agg-tall');
+      setTalleres(data);
+    }
+    setearTalleres();
+  })
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -31,7 +42,7 @@ const Talleres = () => {
   return (
     <div className='flex'>
       <div className='w-1/2'>
-        <h1 className='text-lg'>Ingresa un nuevo taller</h1>
+        <h1 className=" text-2xl">Ingresa un nuevo taller</h1>
         <form className='mt-4 p-10' onSubmit={handleSubmit}>
           <div className='flex flex-col'>
             <div className='my-2'>
@@ -70,10 +81,9 @@ const Talleres = () => {
           </div>
         </form>
       </div>
-      <div className='w-1/2'>
-        <h1 className='text-lg'>Lista de talleres</h1>
+      <div className='w-1/2 flex flex-col align-middle items-center'>
+        <ListaTalleres />
       </div>
-
     </div>
   )
 }

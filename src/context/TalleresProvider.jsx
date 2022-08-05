@@ -20,6 +20,7 @@ export const TalleresProvider = ({ children }) => {
     <TalleresContext.Provider
       value={{
         talleres,
+        setTalleres,
         guardarTaller
       }}>
       {children}
