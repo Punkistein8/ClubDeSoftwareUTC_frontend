@@ -8,8 +8,10 @@ export const TalleresProvider = ({ children }) => {
   const guardarTaller = async (taller) => {
     try {
       const { data } = await clienteAxios.post('/talleres/agg-tall', taller);
-      
-      alert(data.message); //mensaje de alerta
+      const { nombreTaller } = data;
+      const { createdAt, updatedAt, __v, ...tallerAlmacenado } = data;
+      setTalleres([tallerAlmacenado, ...talleres]);
+      alert(`¡Taller '${nombreTaller}' agregado correctamente!`); //mensaje de alerta
     } catch (error) {
       console.log(error);
     }

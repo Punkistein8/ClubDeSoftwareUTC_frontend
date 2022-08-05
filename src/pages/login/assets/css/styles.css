@@ -1,3 +1,7 @@
+body {
+  background-color: var(--bs-gray-900);
+}
+
 @media (min-width: 1200px) {
   #div-email {
     width: 100%;
@@ -9,8 +13,8 @@
     width: 100%;
   }
 }
-.seccionLogin{
+
+.seccionLogin {
   border-right: 10px solid #00a7e6;
   border-left: 10px solid #00a7e6;
 }
-
