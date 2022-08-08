@@ -34,8 +34,8 @@ const Login = () => {
   }
 
   return (
-    <div className="flex justify-center h-screen items-center bg-slate-800">
-      <div className="container h-[70vh] w-[90%] md:w-1/2 bg-slate-300 rounded-xl shadow-lg">
+    <div className="flex justify-center h-screen items-center bg-[#333]">
+      <div className="container h-[70vh] w-[90%] md:w-1/2 bg-stone-300 rounded-xl shadow-lg">
         <div className='absolute mt-3 ml-3'>
           <Link to={'/'}>
             <BackArrow />
