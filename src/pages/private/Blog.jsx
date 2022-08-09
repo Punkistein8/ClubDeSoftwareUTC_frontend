@@ -1,8 +1,12 @@
-import React from 'react'
+import useAuth from '../../hooks/useAuth';
+import { Navigate } from 'react-router-dom';
 
 const Blog = () => {
+  const { auth } = useAuth();
   return (
-    <h1>Desde Blog</h1>
+    <>
+      {auth.tipo === 'admin' ? <h1>Desde Blog</h1> : <Navigate to={'/utcstudent'} />}
+    </>
   )
 }
 

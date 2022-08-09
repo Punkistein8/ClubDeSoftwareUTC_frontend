@@ -35,7 +35,8 @@ const AuthProvider = ({ children }) => { //Destructuring props.children para que
     }
 
     autenticarUsuario(); //Llamar a la funcion para autenticar al usuario
-  }, [])
+  }, [] //Arreglo vacio para que se ejecute solo una vez
+  )
 
   const cerrarSesion = () => {
     localStorage.removeItem('tokenAppClub');

@@ -6,7 +6,7 @@ import StudentView from "./StudentView/StudentView";
 
 
 const RutaProtegida = () => {
-  const { auth, cargando, cerrarSesion } = useAuth();
+  const { auth, cargando } = useAuth();
 
   if (cargando) {
     return <h1>Cargando...</h1>

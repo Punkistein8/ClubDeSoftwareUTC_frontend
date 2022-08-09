@@ -1,16 +1,13 @@
 
 import useAuth from "../../../hooks/useAuth"
-import { useNavigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 
 
 const AdministrarTalleres = () => {
-  const { auth, cargando } = useAuth();
-  const { nombre } = auth;
-  const navegar = useNavigate();
-
+  const { auth } = useAuth();
   return (
     <>
-      {auth.tipo === 'admin' ? <h1>Desde Home</h1> : navegar('/utcstudent')}
+      {auth.tipo === 'admin' ? <h1>Desde Home</h1> : <Navigate to={'/utcstudent'}/>}
     </>
   )
 }

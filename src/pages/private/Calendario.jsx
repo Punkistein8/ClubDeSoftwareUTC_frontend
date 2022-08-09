@@ -1,8 +1,18 @@
-import React from 'react'
+import useAuth from "../../hooks/useAuth"
+import { Navigate } from "react-router"
 
 const Calendario = () => {
+  const { auth } = useAuth()
   return (
-    <h1>Desde Calendario</h1>
+    <>
+      {auth.tipo === "admin"
+        ? (
+          <h1>Desde calendario</h1>
+        ) : (
+          <Navigate to={'/utcstudent'} />
+        )
+      }
+    </>
   )
 }
 
