@@ -11,15 +11,15 @@ const ListaTalleres = () => {
     <>
       {talleres.length ? (
         <>
-          <h1 className=" text-2xl">Listado de talleres</h1>
+          <h1 className=" text-3xl font-bold text-center mt-5 mb-14">Listado de talleres</h1>
           {talleres.map((taller, index) => (
             <Talleres key={index} taller={taller} />
           ))}
         </>
       ) :
         (<>
-          <h1 className=" text-2xl">No hay talleres que mostrar</h1>
-          <h1 className="text-white">¡Comienza agregando <span>talleres</span>!</h1 >
+          <h1 className=" text-3xl font-bold text-center mt-5">No hay talleres que mostrar</h1>
+          <h1 className=" text-center mt-5">¡Comienza agregando <span>talleres</span>!</h1 >
         </>)}
     </>
   )

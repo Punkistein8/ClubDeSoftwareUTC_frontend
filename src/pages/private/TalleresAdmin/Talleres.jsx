@@ -68,12 +68,12 @@ const Talleres = (props) => {
       <div className='flex justify-center'>
         {inscripcion === 'Inscribirse' ? (
           <button
-            className='bg-emerald-700 hover:bg-emerald-800 w-full p-2 font-bold text-zinc-50 rounded-b-md'
+            className='bg-emerald-700 hover:bg-emerald-800 w-full p-2 font-bold text-zinc-50 rounded-b-md cursor-pointer'
             onClick={() => handleClick(taller)}
           >{inscripcion}</button>
         ) : (
           <button
-            className='bg-red-700 hover:bg-red-800 w-full p-2 font-bold text-zinc-50 rounded-b-md'
+            className='bg-red-700 hover:bg-red-800 w-full p-2 font-bold text-zinc-50 rounded-b-md cursor-pointer'
             onClick={() => handleClick(taller)}
           >{inscripcion}</button>
         )}

@@ -16,7 +16,9 @@ const StudentView = () => {
               <span>{nombre}</span>
               {/* <button className='bg-red-700 hover:bg-red-900 h-fit text-white p-2 rounded-md mt-2'
                 onClick={cerrarSesion}>Cerrar Sesión</button> */}
-              <SvgComponent />
+              <div className='w-10'>
+                <SvgComponent />
+              </div>
             </div>
           </div>
           <nav className="text-gray-400 flex items-center" href="#">
