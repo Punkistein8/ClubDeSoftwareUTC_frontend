@@ -23,11 +23,13 @@ const TalleresStudent = () => {
         ?
         (<>
           {talleres.length ? (
-            <div className='flex flex-col justify-center'>
-              <h1 className='text-3xl font-bold text-center mt-5'>Todos los talleres</h1>
-              <div className='w-full flex justify-center'>
+            <div className='flex flex-col'>
+              <h1 className='text-3xl font-bold text-center mt-5 self-center'>Todos los talleres</h1>
+              <div className='w-full flex flex-col'>
                 {talleres.map((taller, index) => (
-                  <Talleres key={index} taller={taller} />
+                  <div className='w-full flex justify-center mb-3'>
+                    <Talleres key={index} taller={taller} />
+                  </div>
                 ))}
               </div>
             </div>
