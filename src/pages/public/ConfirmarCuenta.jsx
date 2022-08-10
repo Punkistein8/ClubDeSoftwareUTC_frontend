@@ -1,19 +1,43 @@
 import './ConfirmarCuenta.css'
 import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import clienteAxios from '../../config/axios.jsx';
+
+const contador = inicio => {
+  const [contador, setContador] = useState(inicio);
+  const navegar = useNavigate(); //permite navegar entre las páginas de la aplicación
+
+  useEffect(() => { //el useEffect se ejecuta una vez al inicio de la aplicación y no se ejecuta nuevamente
+    const intervalo = setInterval(() => { //se ejecuta cada segundo y se actualiza el contador
+      setContador(contador - 1); //se actualiza el contador en 1
+    }, 1000);
+    return () => { //se ejecuta cuando el componente se desmonta
+      clearInterval(intervalo); //se detiene el contador
+    }
+  },
+    [contador] //se ejecuta cuando el contador cambia de valor y no se ejecuta nuevamente hasta que cambie de valor
+  );
+
+  if (contador === 0) { //si el contador es 0, se redirige a la página de login
+    return navegar('/login');
+  }
+  return contador;
+}
+
 
 const ConfirmarCuenta = () => {
   const [cuentaConfirmada, setCuentaConfirmada] = useState(false);
   const [cargando, setCargando] = useState(true);
   const [alerta, setAlerta] = useState({});
-
-  const params = useParams()
+  const params = useParams(); //obtiene los parámetros de la url y los almacena en un objeto "params"
   const { token } = params;
 
+  let cuentaRegresiva = 5;
+  cuentaRegresiva = contador(cuentaRegresiva);
 
   useEffect(() => {
     const confirmarCuenta = async () => {
+
       try {
         const url = `/usuarios/confirmar/${token}`
         const { data } = await clienteAxios(url); //el metodo GET va por default a la url
@@ -22,7 +46,6 @@ const ConfirmarCuenta = () => {
           msg: data.msg,
           type: 'success'
         })
-
         alert(data.msg);
       } catch (error) {
         setAlerta({
@@ -33,8 +56,9 @@ const ConfirmarCuenta = () => {
     }
     confirmarCuenta();
   }, []);
+
   return (
-    <div className='contenedorCuenta'>
+    <div className='contenedorCuenta h-screen bg-[#333]'>
       {!cargando ? (
         <div className='contenedorCuenta'>
           <div className='flex justify-center w-full items-center absolute'>
@@ -42,7 +66,7 @@ const ConfirmarCuenta = () => {
               <p className='text-lg text-center'>
                 <Link to={'/login'}>
                   <span>
-                    ¡Inicia sesión aquí!
+                    serás redirigido en {cuentaRegresiva} segundos
                   </span>
                 </Link>
               </p>
