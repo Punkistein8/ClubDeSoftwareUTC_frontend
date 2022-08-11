@@ -1,4 +1,4 @@
-import logoClub from '../logoClub.png'
+import logoClub from '../../assets/logoClub.png'
 import { Link, Route, Routes } from 'react-router-dom'
 import useAuth from '../../hooks/useAuth'
 
