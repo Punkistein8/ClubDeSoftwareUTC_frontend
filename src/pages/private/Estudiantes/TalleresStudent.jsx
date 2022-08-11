@@ -27,8 +27,8 @@ const TalleresStudent = () => {
               <h1 className='text-3xl font-bold text-center mt-5 self-center'>Todos los talleres</h1>
               <div className='w-full flex flex-col'>
                 {talleres.map((taller, index) => (
-                  <div className='w-full flex justify-center mb-3'>
-                    <Talleres key={index} taller={taller} />
+                  <div key={index} className='w-full flex justify-center mb-3'>
+                    <Talleres taller={taller} />
                   </div>
                 ))}
               </div>

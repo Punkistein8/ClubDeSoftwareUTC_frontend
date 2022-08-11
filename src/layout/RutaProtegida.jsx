@@ -13,14 +13,14 @@ const RutaProtegida = () => {
   }
 
   return (
-    <>
+    <div className="md:max-h-screen md:overflow-hidden md:h-screen">
       {auth.tipo === "usuario" ?
         (<StudentView />)
         :
         (<AdminView />)
       }
       {auth?._id ? <Outlet /> : <Navigate to="/login" />}
-    </>
+    </div>
   )
 
 }

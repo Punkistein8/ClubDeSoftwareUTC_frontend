@@ -59,7 +59,7 @@ const Talleres = (props) => {
 
 
   return (
-    <div className='bg-gray-200 w-3/4 rounded-md shadow-xl mt-3'>
+    <div className='animate__animated animate__fadeIn bg-gray-200 w-3/4 rounded-md shadow-xl mt-3'>
       <h1 className='font-bold text-left p-3 text-xl'>Nombre: <span className='text-stone-900 font-light'>{taller.nombreTaller}</span></h1>
       <hr className='border-gray-400' />
       <h1 className='font-bold text-left p-3'>Responsables: <span className='text-stone-900 font-light'>{taller.responsables}</span></h1>
