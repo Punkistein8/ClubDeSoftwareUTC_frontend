@@ -14,7 +14,9 @@ import mainKevin from '../../../assets/main-kevin.png'
 
 export default function Example() {
   return (
-    <div className="relative bg-white overflow-hidden">
+    <div
+      id='hero'
+      className="animate__animated animate__fadeInLeft relative bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
           <svg
@@ -76,7 +78,7 @@ export default function Example() {
             <div className="sm:text-center lg:text-left">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block text-center xl:inline">Nosotros somos el</span>{' '}
-                <span className="block text-center text-indigo-600 xl:inline">Club de Software</span>
+                <span className="block text-center text-[#008ae6] xl:inline">Club de Software</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 text-justify">
                 Tenemos una clara visión de que el altruismo intelectual y desinteresado formará una
@@ -86,7 +88,7 @@ export default function Example() {
                 <div className="rounded-md shadow">
                   <Link to="login">
                     <p
-                      className="mt-10 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                      className="mt-10 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#008ae6] hover:bg-[#006be6] md:py-4 md:text-lg md:px-10"
                     >
                       Prueba la versión beta de la aplicación
                     </p>

@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 
 const navigation = [
   { name: 'Inicio', href: '#', current: true },
-  { name: 'Miembros', href: '#', current: false },
+  { name: 'Miembros', href: '#miembros', current: false },
   { name: '¿Quiénes Somos?', href: '#', current: false },
   { name: 'Contacto', href: '#', current: false },
 ]
@@ -101,7 +101,7 @@ export default function Example() {
                     <Menu.Items className="z-50 origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
-                          <Link to={'utcstudent'}>
+                          <Link to={'login'}>
                             <p
                               className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                             >
