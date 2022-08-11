@@ -49,7 +49,7 @@ export default function Example() {
                   />
                 </div>
                 <div className="hidden sm:block sm:ml-6">
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4 h-fit">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
@@ -103,7 +103,7 @@ export default function Example() {
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Your Profile
+                            Plataforma
                           </a>
                         )}
                       </Menu.Item>
@@ -113,18 +113,21 @@ export default function Example() {
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Settings
+                            Configuración
                           </a>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Sign out
-                          </a>
+                          <>
+                            <hr></hr>
+                            <a
+                              href="#"
+                              className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-red-800')}
+                            >
+                              Cerrar sesión
+                            </a>
+                          </>
                         )}
                       </Menu.Item>
                     </Menu.Items>
