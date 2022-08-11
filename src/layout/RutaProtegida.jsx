@@ -13,7 +13,8 @@ const RutaProtegida = () => {
   }
 
   return (
-    <div className="md:max-h-screen md:overflow-hidden md:h-screen">
+    // <div className="sm:max-h-screen sm:overflow-hidden sm:h-screen">
+    <div className="">
       {auth.tipo === "usuario" ?
         (<StudentView />)
         :
