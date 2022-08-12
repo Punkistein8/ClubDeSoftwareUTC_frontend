@@ -2,7 +2,7 @@
 
 const MemberCard = ({ memberPhoto, memberName, memberArea, memberDesc, memberFacebook, memberInstagram, memberTwitter, memberGithub, memberLinkedIn }) => {
   return (
-    <div className="p-4 relative">
+    <div className="p-4 relative md:w-1/2">
       <div className="text-center mb-4 absolute -top-16 right-1/2 transform translate-x-1/2">
         <a href="#" className="block relative">
           <img alt="profil" src={memberPhoto} className="mx-auto object-cover rounded-lg h-40 w-40" />

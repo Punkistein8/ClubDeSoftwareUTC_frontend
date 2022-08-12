@@ -3,6 +3,8 @@ import NavBar from './components/NavBar';
 import Hero from './components/Hero';
 import Members from './components/Members';
 import About from './components/About';
+import Technologies from './components/Technologies';
+import Footer from './components/Footer';
 
 function Landing() {
 
@@ -12,6 +14,8 @@ function Landing() {
       <Hero />
       <Members />
       <About />
+      <Technologies />
+      <Footer />
     </div>
   );
 }

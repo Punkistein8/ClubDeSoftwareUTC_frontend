@@ -1,14 +1,12 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { XIcon } from '@heroicons/react/outline'
 
 import { Link } from 'react-router-dom'
 
 import mainMain from '../../../assets/imagenAbout.jpg'
-import mainClub from '../../../assets/main-club.png'
-import mainSaul from '../../../assets/main-saul.png'
-import mainKevin from '../../../assets/main-kevin.png'
+
 
 
 
@@ -78,19 +76,18 @@ export default function Example() {
             <div className="sm:text-center lg:text-left">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block text-center xl:inline">Nosotros somos el</span>{' '}
-                <span className="block text-center text-[#008ae6] xl:inline">Club de Software</span>
+                <span className="block text-center text-[#008ae6] xl:inline">Club de Software,</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 text-justify">
-                Tenemos una clara visión de que el altruismo intelectual y desinteresado formará una
-                herramienta de transformación que nos permitirá crear una sociedad más justa, capaz y equitativa.
+                y en esta página encontrarás más información sobre el club, sus miembros, proyectos, actividades, talleres y ¡mucho más!
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                <div className="rounded-md shadow">
+                <div className="rounded-md shadow mt-10">
                   <Link to="login">
                     <p
-                      className="mt-10 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#008ae6] hover:bg-[#006be6] md:py-4 md:text-lg md:px-10"
+                      className=" w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white transition ease-in-out duration-400 bg-[#008ae6] hover:bg-[#006be6] md:py-4 md:text-lg md:px-10"
                     >
-                      Prueba la versión beta de la aplicación
+                      Prueba la versión beta de la aplicación web
                     </p>
                   </Link>
                 </div>
