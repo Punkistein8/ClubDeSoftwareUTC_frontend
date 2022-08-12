@@ -56,6 +56,7 @@ export default function Example() {
             memberTwitter="https://twitter.com/chelovek_Henry"
             memberGithub="https://github.com/Punkistein8"
             memberLinkedIn="https://www.linkedin.com/in/henry-guerrero-leon/"
+            memberWebPage='https://www.henrylegus.com/'
           />
 
           <MemberCard

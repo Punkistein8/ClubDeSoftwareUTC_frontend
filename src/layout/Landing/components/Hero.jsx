@@ -85,10 +85,13 @@ export default function Example() {
                 <div className="rounded-md shadow mt-10">
                   <Link to="utcstudent">
                     <p
-                      className=" w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white transition ease-in-out duration-400 bg-[#008ae6] hover:bg-[#006be6] md:py-4 md:text-lg md:px-10"
+                      className="hidden w-full sm:flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white transition ease-in-out duration-400 bg-[#008ae6] hover:bg-[#006be6] md:py-4 md:text-lg md:px-10"
                     >
                       Prueba la versión beta de la aplicación web
                     </p>
+                    <p
+                      className="w-full flex sm:hidden items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white transition ease-in-out duration-400 bg-[#008ae6] hover:bg-[#006be6] md:py-4 md:text-lg md:px-10"
+                    >¡Prueba la beta!</p>
                   </Link>
                 </div>
               </div>

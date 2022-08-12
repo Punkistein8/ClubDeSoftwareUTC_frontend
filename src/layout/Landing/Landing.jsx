@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 function Landing() {
 
   return (
-    <div className="App">
+    <div className="App flex flex-col">
       <NavBar />
       <Hero />
       <Members />
