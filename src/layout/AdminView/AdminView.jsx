@@ -18,7 +18,7 @@ const AdminView = () => {
               <img src={logoClub} className='max-h-16 m-7' />
             </Link>
             <div className='flex flex-col items-center'>
-              <SvgComponent className='w-10'/>
+              <SvgComponent className='w-10' />
             </div>
           </div>
           <nav className="text-gray-400 flex items-center">
