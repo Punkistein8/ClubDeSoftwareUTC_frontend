@@ -1,9 +1,13 @@
 
-import { useEffect, useRef } from "react";
-import useAuth from "../../../hooks/useAuth";
+import { useRef } from "react";
 import { Navigate } from 'react-router-dom'
+
 import 'animate.css';
+
+import useAuth from "../../../hooks/useAuth";
+
 import softDev from './soft-dev.jpg'
+import mainStudent from './main-student.jpg'
 
 const EstudiantesHome = () => {
   const { auth } = useAuth();
@@ -17,7 +21,6 @@ const EstudiantesHome = () => {
     transformStyle: 'preserve-3d',
     willChange: 'transform',
   }
-
 
   function handleHover(e) {
     const { clientX, clientY, currentTarget } = e;
@@ -37,12 +40,11 @@ const EstudiantesHome = () => {
     ref.current.style.transform = `perspective(${e.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
   }
 
-
   return (
     <>
       {auth.tipo === 'usuario' ? (
         <div className="flex flex-col sm:flex sm:flex-row gap-9">
-          <div className=" sm:w-1/2 sm:h-[90vh] flex justify-center items-center flex-col">
+          <div className="sm:w-1/2 sm:h-[90vh] flex justify-center items-center flex-col">
             <section
               style={styleProp}
               onMouseMove={handleHover}
@@ -59,7 +61,8 @@ const EstudiantesHome = () => {
           </div>
           <div className="sm:w-1/2 sm:h-[90vh] flex justify-center items-center flex-col">
             <div className="animate__animated animate__fadeInUp sm:h-fit sm:mr-7">
-              <img className=" w-64 sm:w-[420px] rounded-xl shadow-black shadow-2xl" src={softDev} alt="soft-dev" />
+              <img className="hidden mb-20 w-64 sm:block sm:w-[420px] rounded-xl shadow-black shadow-2xl" src={softDev} alt="soft-dev" />
+              <img className="mb-4 w-80 sm:hidden rounded-xl shadow-black shadow-2xl" src={mainStudent} alt="soft-dev" />
             </div>
           </div>
         </div>

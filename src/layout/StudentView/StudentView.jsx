@@ -6,7 +6,7 @@ import SvgComponent from '../sign-out'
 const StudentView = () => {
   return (
     <>
-      <div className='bg-slate-800 w-full '>
+      <div className='bg-slate-800 w-full'>
         <div className='container flex justify-between items-center'>
           <div className='flex flex-row items-center'>
             <Link to='/'>

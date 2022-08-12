@@ -18,10 +18,7 @@ const AdminView = () => {
               <img src={logoClub} className='max-h-16 m-7' />
             </Link>
             <div className='flex flex-col items-center'>
-              <span>{nombre}</span>
-              {/* <button className='bg-red-700 hover:bg-red-900 h-fit text-white p-2 rounded-md mt-2'
-                onClick={cerrarSesion}>Cerrar Sesión</button> */}
-              <SvgComponent />
+              <SvgComponent className='w-10'/>
             </div>
           </div>
           <nav className="text-gray-400 flex items-center">
@@ -32,7 +29,7 @@ const AdminView = () => {
               <Link to='/admin/blog' className='h-fit pr-5'>Blog</Link>
               <Link to='/admin/usuarios' className='h-fit pr-5'>Usuarios</Link>
             </div>
-            <div className='md:hidden'>
+            <div className='md:hidden z-10'>
               <Dropdown />
             </div>
           </nav>
