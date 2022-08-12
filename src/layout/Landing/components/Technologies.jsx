@@ -2,7 +2,7 @@
 const Technologies = () => {
   return (
     <section>
-      <div className="text-center bg-gradient-to-b from-blue-50 to-purple-300">
+      <div className="text-center bg-gradient-to-b from-blue-50 to-violet-300">
 
         <h2 className="text-center text-3xl font-bold text-gray-800">Stack de tecnologías usadas</h2>
 
