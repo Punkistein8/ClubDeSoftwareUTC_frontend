@@ -3,6 +3,7 @@
 import { useState, useEffect, createContext } from "react";
 import clienteAxios from "../config/axios";
 
+
 const AuthContext = createContext(); //Crea un contexto de autenticacion para poder usarlo en otros componentes
 
 const AuthProvider = ({ children }) => { //Destructuring props.children para que todos los componentes hijos se suscriban al estado global de autenticacion
@@ -14,7 +15,7 @@ const AuthProvider = ({ children }) => { //Destructuring props.children para que
     const autenticarUsuario = async () => {
       const token = localStorage.getItem('tokenAppClub') //Obtener el token que ya debe estar guardado en LocalStorage
       if (!token) {
-        setCargando(false);
+        return setCargando(false);
       } //Si no hay token, no hacemos nada, sale del flujo
 
       const config = {  //Configuracion para el header de la peticion
@@ -56,5 +57,6 @@ const AuthProvider = ({ children }) => { //Destructuring props.children para que
     </AuthContext.Provider>
   );
 }
+
 export default AuthContext;
 export { AuthProvider };

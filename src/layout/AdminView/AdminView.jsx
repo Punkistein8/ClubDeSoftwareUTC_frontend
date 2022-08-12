@@ -14,7 +14,9 @@ const AdminView = () => {
       <div className='bg-slate-800 w-full'>
         <div className='container flex justify-around md:justify-between items-center'>
           <div className='flex flex-row items-center'>
-            <img src={logoClub} className='max-h-16 m-7' />
+            <Link to='/'>
+              <img src={logoClub} className='max-h-16 m-7' />
+            </Link>
             <div className='flex flex-col items-center'>
               <span>{nombre}</span>
               {/* <button className='bg-red-700 hover:bg-red-900 h-fit text-white p-2 rounded-md mt-2'

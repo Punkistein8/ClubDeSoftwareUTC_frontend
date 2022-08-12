@@ -83,7 +83,7 @@ export default function Example() {
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow mt-10">
-                  <Link to="login">
+                  <Link to="utcstudent">
                     <p
                       className=" w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white transition ease-in-out duration-400 bg-[#008ae6] hover:bg-[#006be6] md:py-4 md:text-lg md:px-10"
                     >
