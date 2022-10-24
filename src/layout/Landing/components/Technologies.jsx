@@ -87,6 +87,7 @@ const Technologies = () => {
             <h5 className="text-xl font-medium leading-tight mb-2">Tailwind</h5>
             <p className="text-gray-500">Un framework de CSS <br /> altamente personalizable</p>
           </div>
+          
           {/* VITE */}
           <div className="m-10 sm:m-32">
             <a href="https://vitejs.dev/" target="_blank">

@@ -116,11 +116,11 @@ export default function Example() {
                         <Menu.Item>
                           {({ active }) => (
                             <Link to={'utcstudent/talleres'}>
-                              <a
+                              <p
                                 className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 cursor-pointer')}
                               >
                                 Talleres
-                              </a>
+                              </p>
                             </Link>
                           )}
                         </Menu.Item>
@@ -128,12 +128,12 @@ export default function Example() {
                           {({ active }) => (
                             <>
                               <hr></hr>
-                              <a
+                              <p
                                 onClick={cerrarSesion}
                                 className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-red-800 cursor-pointer')}
                               >
                                 Cerrar sesión
-                              </a>
+                              </p>
                             </>
                           )}
                         </Menu.Item>
